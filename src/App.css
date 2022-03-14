@@ -1,0 +1,99 @@
+.todo-page-wrapper {
+  width: 450px;
+  max-width: 95vw;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 24px;
+  border-radius: 10px;
+}
+
+.todo-page-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+input {
+  padding: 10px;
+  border: 0.5px solid #ddd;
+  border-radius: 4px;
+  width: 100%;
+}
+
+button {
+  padding: 10px;
+  border: 0.5px solid #ddd;
+  border-radius: 4px;
+  background-color: #ddd;
+  color: #333;
+  font-weight: 700;
+  min-width: 100px;
+  cursor: pointer;
+}
+
+button.remove {
+  border: 0.5px solid #ddd;
+  border-radius: 4px;
+  background-color: transparent;
+  color: #333;
+  padding: 5px 10px;
+  min-width: unset;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.hgap {
+  width: 20px;
+  height: 1px;
+}
+
+.todo-form-actions {
+  display: flex;
+}
+
+.todo-form {
+  background: var(--c-b);
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.todo-lists {
+  margin-top: 30px;
+}
+
+.list-item-details {
+  display: flex;
+  align-items: center;
+}
+
+.todo-text {
+  margin-left: 16px;
+  font-size: 14px;
+}
+
+.todo-text.completed {
+  text-decoration: line-through;
+}
+
+.todo-text.red {
+  margin-left: 16px;
+}
+
+.list-item {
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.list-item.red {
+  background: var(--c-r);
+}
+
+.list-item.yellow {
+  background: var(--c-y);
+}
+
+.todo-item-action {
+  display: flex;
+  justify-content: flex-end;
+}
