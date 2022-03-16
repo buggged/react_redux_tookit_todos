@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { nanoid } from "nanoid";
 
 const initState = {
   todos: [], // { title, id, completed }
@@ -7,7 +8,7 @@ const initState = {
 const addTodo = (state, action) => {
   const newTodo = {
     title: action.payload.title,
-    id: todos.length,
+    id: nanoid(8),
     completed: false,
   };
   state.todos.push(newTodo)
