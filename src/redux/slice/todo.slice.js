@@ -5,42 +5,24 @@ const initState = {
 };
 
 const addTodo = (state, action) => {
-  const { todos } = state;
   const newTodo = {
     title: action.payload.title,
     id: todos.length,
     completed: false,
   };
-  return {
-    ...state,
-    todos: [...todos, newTodo],
-  };
+  state.todos.push(newTodo)
 };
 
 const removeTodo = (state, action) => {
   const { todos } = state;
-  const newTodos = todos.filter((todo) => todo.id !== action.payload.id);
-  return {
-    ...state,
-    todos: newTodos,
-  };
+  const todoIndex = todos.findIndex((todo) => todo.id === action.payload.id);
+  state.todos.splice(todoIndex, 1)
 };
 
 const markAsCompleted = (state, action) => {
   const { todos } = state;
-  const newTodos = todos.map((todo) => {
-    if (todo.id === action.payload.id) {
-      return {
-        ...todo,
-        completed: !todo.completed,
-      };
-    }
-    return todo;
-  });
-  return {
-    ...state,
-    todos: newTodos,
-  };
+  const todoIndex = todos.findIndex((todo) => todo.id === action.payload.id);
+  state.todos[todoIndex].completed = !state.todos[todoIndex].completed
 };
 
 const todoSlice = createSlice({
